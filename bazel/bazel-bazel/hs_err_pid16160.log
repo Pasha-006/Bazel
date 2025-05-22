@@ -1,0 +1,292 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 264241152 bytes. Error detail: G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3564), pid=16160, tid=16536
+#
+# JRE version:  (24.0+36) (build )
+# Java VM: OpenJDK 64-Bit Server VM (24+36, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: --enable-native-access=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED -Xverify:none -Djava.util.logging.config.file=c:\\users\\shaikr4\\_bazel_shaikr4\\eyruus6i\\javalog.properties -Dcom.google.devtools.build.lib.util.LogHandlerQuerier.class=com.google.devtools.build.lib.util.SimpleLogHandler$HandlerQuerier -XX:-MaxFDLimit -Djava.lang.Thread.allowVirtualThreads=true -Djava.library.path=C:\\Users\\shaikr4\\_bazel_shaikr4\\install\\44169b734e9f8db9144d3b2ad2308154;C:\\Users\\shaikr4\\_bazel_shaikr4\\install\\44169b734e9f8db9144d3b2ad2308154\\embedded_tools\\jdk\\bin;C:\\Users\\shaikr4\\_bazel_shaikr4\\install\\44169b734e9f8db9144d3b2ad2308154\\embedded_tools\\jdk\\bin\\server -Dfile.encoding=ISO-8859-1 -Duser.country= -Duser.language= -Duser.variant= -Djdk.nio.file.WatchService.maxEventsPerPoll=10000 -Dsun.misc.unsafe.memory.access=allow -XX:+IgnoreUnrecognizedVMOptions -XX:+UseAllWindowsProcessorGroups -agentpath:C:\Program Files\Palo Alto Networks\Traps\cyjagent.dll C:\\Users\\shaikr4\\_bazel_shaikr4\\install\\44169b734e9f8db9144d3b2ad2308154\\A-server.jar --max_idle_secs=10800 --noshutdown_on_low_sys_mem --connect_timeout_secs=30 --output_user_root=C:\Users\shaikr4\_bazel_shaikr4 --install_base=C:\Users\shaikr4\_bazel_shaikr4\install\44169b734e9f8db9144d3b2ad2308154 --install_md5=44169b734e9f8db9144d3b2ad2308154 --lock_install_base --output_base=c:\users\shaikr4\_bazel_shaikr4\eyruus6i --workspace_directory=c:\users\shaikr4\desktop\cipd\sample\bazel --default_system_javabase= --failure_detail_out=C:\Users\shaikr4\_bazel_shaikr4\eyruus6i\failure_detail.rawproto --idle_server_tasks --write_command_log --nowatchfs --nofatal_event_bus_exceptions --nowindows_enable_symlinks --client_debug=false --product_name=Bazel --option_sources=
+
+Host: 12th Gen Intel(R) Core(TM) i7-1265U, 12 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.5124)
+Time: Thu May 22 22:09:31 2025 India Standard Time elapsed time: 0.108212 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000164c7d2e4f0):  JavaThread "Unknown thread" [_thread_in_vm, id=16536, stack(0x0000001046f00000,0x0000001047000000) (1024K)]
+
+Stack: [0x0000001046f00000,0x0000001047000000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x741329]  (no source info available)
+V  [jvm.dll+0x97e0c3]  (no source info available)
+V  [jvm.dll+0x98039d]  (no source info available)
+V  [jvm.dll+0x980a13]  (no source info available)
+V  [jvm.dll+0x2b5ad6]  (no source info available)
+V  [jvm.dll+0x73d795]  (no source info available)
+V  [jvm.dll+0x73115a]  (no source info available)
+V  [jvm.dll+0x39ebba]  (no source info available)
+V  [jvm.dll+0x3a68b6]  (no source info available)
+V  [jvm.dll+0x39313e]  (no source info available)
+V  [jvm.dll+0x3933f8]  (no source info available)
+V  [jvm.dll+0x36a13c]  (no source info available)
+V  [jvm.dll+0x36adfd]  (no source info available)
+V  [jvm.dll+0x94087f]  (no source info available)
+V  [jvm.dll+0x40791d]  (no source info available)
+V  [jvm.dll+0x928cfe]  (no source info available)
+V  [jvm.dll+0x4a2e2e]  (no source info available)
+V  [jvm.dll+0x4a4d61]  (no source info available)
+C  [cyvrtrap.dll+0x13b43]  (no source info available)
+C  [jli.dll+0x52a1]  (no source info available)
+C  [ucrtbase.dll+0x29333]  (no source info available)
+C  [cyinjct.dll+0x11e7]  (no source info available)
+C  [KERNEL32.DLL+0x1259d]  (no source info available)
+C  [ntdll.dll+0x5af38]  (no source info available)
+
+Lock stack of current Java thread (top to bottom):
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffe2e3fbf58, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+  0x00000164ca99e960 WorkerThread "GC Thread#0"                     [id=25260, stack(0x0000001047000000,0x0000001047100000) (1024K)]
+  0x00000164dc7ae3e0 ConcurrentGCThread "G1 Main Marker"            [id=23412, stack(0x0000001047100000,0x0000001047200000) (1024K)]
+  0x00000164dc7b08e0 WorkerThread "G1 Conc#0"                       [id=10028, stack(0x0000001047200000,0x0000001047300000) (1024K)]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffe2da6f11a]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007ffe2e4850d0] Heap_lock - owner thread: 0x00000164c7d2e4f0
+
+Heap address: 0x0000000704e00000, size: 4018 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+UseCompressedClassPointers 1, UseCompactObjectHeaders 0
+Narrow klass pointer bits 32, Max shift 3
+Narrow klass base: 0xffffffffffffffff, Narrow klass shift: -1
+Encoding Range: [0xffffffffffffffff - 0x000000007fffffff), (2147483648 bytes)
+Klass Range:    [0x0000000000000000 - 0x0000000000000000), (0 bytes)
+Klass ID Range:  [4294967295 - 0) (1)
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 4 size 8 Array Of Cards #cards 16 size 48 Howl #buckets 8 coarsen threshold 3686 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 4096
+
+Heap:
+ garbage-first heap   total reserved 4114432K, committed 0K, used 0K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffe2de8fb49]
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.094 Loaded shared library c:\users\shaikr4\_bazel~1\install\44169b~1\embedd~1\jdk\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff7bf450000 - 0x00007ff7bf45f000 	c:\users\shaikr4\_bazel~1\install\44169b~1\embedd~1\jdk\bin\java.exe
+0x00007ffe9fb10000 - 0x00007ffe9fd27000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffe9f840000 - 0x00007ffe9f904000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffe9f460000 - 0x00007ffe9f833000 	C:\Windows\System32\KERNELBASE.dll
+0x000000007f530000 - 0x000000007f56c000 	C:\Windows\System32\cyinjct.dll
+0x00007ffe9f2f0000 - 0x00007ffe9f2f9000 	C:\Windows\System32\ntnativeapi.dll
+0x00007ffe81280000 - 0x00007ffe81296000 	c:\users\shaikr4\_bazel~1\install\44169b~1\embedd~1\jdk\bin\jli.dll
+0x00000164c7e70000 - 0x00000164c8021000 	C:\Windows\System32\USER32.dll
+0x00007ffe9d170000 - 0x00007ffe9d196000 	C:\Windows\System32\win32u.dll
+0x00007ffe9e0c0000 - 0x00007ffe9e0e9000 	C:\Windows\System32\GDI32.dll
+0x00007ffe9cf90000 - 0x00007ffe9d0ab000 	C:\Windows\System32\gdi32full.dll
+0x00007ffe9cef0000 - 0x00007ffe9cf8a000 	C:\Windows\System32\msvcp_win.dll
+0x00000164c8030000 - 0x00000164c8141000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffe6c310000 - 0x00007ffe6c32e000 	c:\users\shaikr4\_bazel~1\install\44169b~1\embedd~1\jdk\bin\VCRUNTIME140.dll
+0x00007ffe8eed0000 - 0x00007ffe8f168000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.5124_none_270e8f4f7386d69d\COMCTL32.dll
+0x00007ffe9daf0000 - 0x00007ffe9db97000 	C:\Windows\System32\msvcrt.dll
+0x00007ffe9f2d0000 - 0x00007ffe9f2ee000 	C:\Windows\System32\cyvera.dll
+0x00007ffe9f250000 - 0x00007ffe9f2d0000 	C:\Windows\System32\cyvrtrap.dll
+0x00007ffe9e880000 - 0x00007ffe9e8b1000 	C:\Windows\System32\IMM32.DLL
+0x00007ffe3ac80000 - 0x00007ffe3ad31000 	C:\Program Files\McAfee\Endpoint Security\Threat Prevention\Ips\EpMPApi.dll
+0x00007ffe9f340000 - 0x00007ffe9f454000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffe9e000000 - 0x00007ffe9e0b1000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffe9e8c0000 - 0x00007ffe9e968000 	C:\Windows\System32\sechost.dll
+0x00007ffe9cda0000 - 0x00007ffe9cdc8000 	C:\Windows\System32\bcrypt.dll
+0x00007ffe9d1a0000 - 0x00007ffe9d21b000 	C:\Windows\System32\WINTRUST.dll
+0x00007ffe9caf0000 - 0x00007ffe9cc57000 	C:\Windows\System32\CRYPT32.dll
+0x00007ffe9c3e0000 - 0x00007ffe9c3f2000 	C:\Windows\SYSTEM32\MSASN1.dll
+0x0000000072aa0000 - 0x0000000072aac000 	C:\Program Files\McAfee\Endpoint Security\Threat Prevention\Ips\EpMPThe.dll
+0x00007ffe3ac20000 - 0x00007ffe3ac7b000 	C:\Program Files\McAfee\Endpoint Security\Threat Prevention\Ips\HIPHandlers64.dll
+0x00007ffe9e970000 - 0x00007ffe9f206000 	C:\Windows\System32\SHELL32.dll
+0x00007ffe9cc60000 - 0x00007ffe9cd9f000 	C:\Windows\System32\wintypes.dll
+0x00007ffe9d730000 - 0x00007ffe9dac2000 	C:\Windows\System32\combase.dll
+0x00007ffe9e530000 - 0x00007ffe9e593000 	C:\Windows\System32\SHLWAPI.dll
+0x00007ffe9b290000 - 0x00007ffe9b2bd000 	C:\Windows\SYSTEM32\IPHLPAPI.DLL
+0x00007ffe99ba0000 - 0x00007ffe99dd2000 	C:\Windows\SYSTEM32\dbghelp.dll
+0x00007ffe9e450000 - 0x00007ffe9e527000 	C:\Windows\System32\OLEAUT32.dll
+0x00007ffe65350000 - 0x00007ffe65407000 	C:\Program Files\Common Files\McAfee\SystemCore\mfehcinj.dll
+0x00007ffe94280000 - 0x00007ffe9428f000 	C:\Program Files\Common Files\McAfee\SystemCore\mfehcthe.dll
+0x00007ffe93e00000 - 0x00007ffe93e2e000 	C:\Program Files\McAfee\Endpoint Security\Adaptive Threat Protection\mfedeeprem64.dll
+0x00007ffe9dc90000 - 0x00007ffe9de31000 	C:\Windows\System32\ole32.dll
+0x00007ffe92b50000 - 0x00007ffe92b5c000 	c:\users\shaikr4\_bazel~1\install\44169b~1\embedd~1\jdk\bin\vcruntime140_1.dll
+0x00007ffe63f90000 - 0x00007ffe6401d000 	c:\users\shaikr4\_bazel~1\install\44169b~1\embedd~1\jdk\bin\msvcp140.dll
+0x00007ffe2d6f0000 - 0x00007ffe2e56c000 	c:\users\shaikr4\_bazel~1\install\44169b~1\embedd~1\jdk\bin\server\jvm.dll
+0x00007ffe9e270000 - 0x00007ffe9e2e1000 	C:\Windows\System32\WS2_32.dll
+0x00007ffe9b850000 - 0x00007ffe9b89d000 	C:\Windows\SYSTEM32\POWRPROF.dll
+0x00007ffe93330000 - 0x00007ffe93364000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffe8f1d0000 - 0x00007ffe8f1da000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffe9b830000 - 0x00007ffe9b843000 	C:\Windows\SYSTEM32\UMPDC.dll
+0x00007ffe9baf0000 - 0x00007ffe9bb08000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffe82080000 - 0x00007ffe8208a000 	c:\users\shaikr4\_bazel~1\install\44169b~1\embedd~1\jdk\bin\jimage.dll
+0x00007ffe8f700000 - 0x00007ffe8f732000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffe9d220000 - 0x00007ffe9d29b000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffe9f210000 - 0x00007ffe9f248000 	C:\Program Files\Palo Alto Networks\Traps\cyjagent.dll
+0x00007ffe6b2b0000 - 0x00007ffe6b2ce000 	c:\users\shaikr4\_bazel~1\install\44169b~1\embedd~1\jdk\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;c:\users\shaikr4\_bazel~1\install\44169b~1\embedd~1\jdk\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.5124_none_270e8f4f7386d69d;C:\Program Files\McAfee\Endpoint Security\Threat Prevention\Ips;C:\Program Files\Common Files\McAfee\SystemCore;C:\Program Files\McAfee\Endpoint Security\Adaptive Threat Protection;c:\users\shaikr4\_bazel~1\install\44169b~1\embedd~1\jdk\bin\server;C:\Program Files\Palo Alto Networks\Traps
+
+VM Arguments:
+jvm_args: --enable-native-access=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED -Xverify:none -Djava.util.logging.config.file=c:\\users\\shaikr4\\_bazel_shaikr4\\eyruus6i\\javalog.properties -Dcom.google.devtools.build.lib.util.LogHandlerQuerier.class=com.google.devtools.build.lib.util.SimpleLogHandler$HandlerQuerier -XX:-MaxFDLimit -Djava.lang.Thread.allowVirtualThreads=true -Djava.library.path=C:\\Users\\shaikr4\\_bazel_shaikr4\\install\\44169b734e9f8db9144d3b2ad2308154;C:\\Users\\shaikr4\\_bazel_shaikr4\\install\\44169b734e9f8db9144d3b2ad2308154\\embedded_tools\\jdk\\bin;C:\\Users\\shaikr4\\_bazel_shaikr4\\install\\44169b734e9f8db9144d3b2ad2308154\\embedded_tools\\jdk\\bin\\server -Dfile.encoding=ISO-8859-1 -Duser.country= -Duser.language= -Duser.variant= -Djdk.nio.file.WatchService.maxEventsPerPoll=10000 -Dsun.misc.unsafe.memory.access=allow -XX:+IgnoreUnrecognizedVMOptions -XX:+UseAllWindowsProcessorGroups -agentpath:C:\Program Files\Palo Alto Networks\Traps\cyjagent.dll 
+java_command: C:\\Users\\shaikr4\\_bazel_shaikr4\\install\\44169b734e9f8db9144d3b2ad2308154\\A-server.jar --max_idle_secs=10800 --noshutdown_on_low_sys_mem --connect_timeout_secs=30 --output_user_root=C:\Users\shaikr4\_bazel_shaikr4 --install_base=C:\Users\shaikr4\_bazel_shaikr4\install\44169b734e9f8db9144d3b2ad2308154 --install_md5=44169b734e9f8db9144d3b2ad2308154 --lock_install_base --output_base=c:\users\shaikr4\_bazel_shaikr4\eyruus6i --workspace_directory=c:\users\shaikr4\desktop\cipd\sample\bazel --default_system_javabase= --failure_detail_out=C:\Users\shaikr4\_bazel_shaikr4\eyruus6i\failure_detail.rawproto --idle_server_tasks --write_command_log --nowatchfs --nofatal_event_bus_exceptions --nowindows_enable_symlinks --client_debug=false --product_name=Bazel --option_sources=
+java_class_path (initial): C:\\Users\\shaikr4\\_bazel_shaikr4\\install\\44169b734e9f8db9144d3b2ad2308154\\A-server.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+     bool IgnoreUnrecognizedVMOptions              = true                                      {product} {command line}
+   size_t InitialHeapSize                          = 264241152                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MarkStackSizeMax                         = 536870912                                 {product} {ergonomic}
+     bool MaxFDLimit                               = false                                     {product} {command line}
+   size_t MaxHeapSize                              = 4213178368                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832704                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122945536                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122880000                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4213178368                             {manageable} {ergonomic}
+     bool UseAllWindowsProcessorGroups             = true                                      {product} {command line}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Bazel;C:\Program Files\Git\cmd;C:\msys64_2\ucrt64\bin;C:\bazel\bin;C:\Users\shaikr4\AppData\Local\Microsoft\WindowsApps;C:\Users\shaikr4\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\CMake\bin;
+USERNAME=shaikr4
+LANG=en_US.ISO-8859-1
+LC_ALL=en_US.ISO-8859-1
+LC_CTYPE=en_US.ISO-8859-1
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 154 Stepping 4, GenuineIntel
+TMP=C:\Users\shaikr4\AppData\Local\Temp
+TEMP=C:\Users\shaikr4\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.5124)
+OS uptime: 0 days 7:58 hours
+Hyper-V role detected
+
+CPU: total 12 (initial active 12) (6 cores per cpu, 2 threads per core) family 6 model 154 stepping 4 microcode 0x42a, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, clwb, hv, serialize, rdtscp, rdpid, fsrm, gfni, f16c, cet_ibt, cet_ss
+Processor Information for processor 0
+  Max Mhz: 1800, Current Mhz: 1800, Mhz Limit: 1800
+Processor Information for processor 1
+  Max Mhz: 1800, Current Mhz: 1800, Mhz Limit: 1800
+Processor Information for processor 2
+  Max Mhz: 1800, Current Mhz: 1800, Mhz Limit: 1800
+Processor Information for processor 3
+  Max Mhz: 1800, Current Mhz: 1800, Mhz Limit: 1800
+Processor Information for processor 4
+  Max Mhz: 1800, Current Mhz: 1300, Mhz Limit: 1296
+Processor Information for processor 5
+  Max Mhz: 1800, Current Mhz: 1300, Mhz Limit: 1296
+Processor Information for processor 6
+  Max Mhz: 1800, Current Mhz: 1300, Mhz Limit: 1296
+Processor Information for processor 7
+  Max Mhz: 1800, Current Mhz: 1300, Mhz Limit: 1296
+Processor Information for processor 8
+  Max Mhz: 1800, Current Mhz: 1300, Mhz Limit: 1296
+Processor Information for processor 9
+  Max Mhz: 1800, Current Mhz: 1300, Mhz Limit: 1296
+Processor Information for processor 10
+  Max Mhz: 1800, Current Mhz: 1300, Mhz Limit: 1296
+Processor Information for processor 11
+  Max Mhz: 1800, Current Mhz: 1300, Mhz Limit: 1296
+
+Memory: 4k page, system-wide physical 16068M (3194M free)
+TotalPageFile size 16068M (AvailPageFile size 169M)
+current process WorkingSet (physical memory assigned to process): 17M, peak: 17M
+current process commit charge ("private bytes"): 69M, peak: 321M
+
+vm_info: OpenJDK 64-Bit Server VM (24+36) for windows-amd64 JRE (24+36) (Zulu24.28+83-CA), built on 2025-02-26T13:03:31Z with MS VC++ 17.1 (VS2022)
+
+END.

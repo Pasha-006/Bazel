@@ -1,0 +1,11 @@
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+http_archive(
+    name = "rules_msys2",
+    sha256 = "<latest-sha256>",
+    strip_prefix = "rules_msys2-main",
+    url = "https://github.com/bazel-contrib/rules_msys2/archive/refs/heads/main.zip",
+)
+
+load("@rules_msys2//:repositories.bzl", "rules_msys2_dependencies")
+rules_msys2_dependencies()
